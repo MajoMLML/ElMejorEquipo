@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100e15">
+    <title>La tecnologia y la lectura</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="#" aria-label="Inicio">
+            <span class="logo-icon">♫</span>
+            Canciones<span class="logo-dot">.</span>
+        </a>
+        <span class="header-label">MY MUSIC COLLECTION</span>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p class="eyebrow">UNA COLECCIÓN ESPECIAL</p>
+            <h1>Canciones que<br><span>dicen más.</span></h1>
+            <p class="subtitle">
+                Diez canciones, diez historias. Elige una tarjeta
+                para descubrir su letra.
+            </p>
+        </section>
+
+        <section class="music-section" aria-label="Colección de canciones">
+            <div class="carousel">
+                <button class="nav-button prev" id="prevBtn"
+                    aria-label="Canción anterior">‹</button>
+
+                <div class="card-stage" id="cardStage"
+                    aria-label="Tarjetas musicales">
+                </div>
+
+                <button class="nav-button next" id="nextBtn"
+                    aria-label="Canción siguiente">›</button>
+            </div>
+
+            <div class="song-info" aria-live="polite">
+                <p class="song-counter" id="songCounter">01 / 10</p>
+                <h2 id="currentTitle">Labios Rotos</h2>
+                <p id="currentArtist">Zoé</p>
+            </div>
+
+            <button class="open-lyrics" id="openLyrics">
+                <span>♫</span> Ver letra de la canción
+            </button>
+
+            <p class="instructions">
+                Usa las flechas o selecciona una tarjeta.
+            </p>
+
+            <div class="dots" id="dots" aria-label="Elegir canción"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>HECHO POR EL EQUIPO MAS PRO :D <span></span></p>
+    </footer>
+
+    <!-- Ventana para mostrar la letra -->
+    <div class="modal" id="lyricsModal" aria-hidden="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+
+        <section class="lyrics-panel" role="dialog"
+            aria-modal="true" aria-labelledby="lyricsTitle">
+
+            <button class="close-modal" id="closeModal"
+                aria-label="Cerrar ventana">×</button>
+
+            <p class="eyebrow">LA CANCIÓN SE SIENTE</p>
+            <div class="lyrics-art" id="lyricsArt"></div>
+
+            <h2 id="lyricsTitle">Título de la canción</h2>
+            <p class="lyrics-artist" id="lyricsArtist">Artista</p>
+
+            <div class="lyrics-content" id="lyricsContent"></div>
+
+            <button class="back-button" id="backButton">
+                ← Volver a las canciones
+            </button>
+        </section>
+    </div>
+</body>
+</html>
